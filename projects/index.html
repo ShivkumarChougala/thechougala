@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>projects | thechougala</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="/static/favicon.jpg">
+
+    <link rel="stylesheet" href="/static/style.css?v=3">
+    <link rel="stylesheet" href="/static/ansi.css?v=2">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div id="top-nav">
+            <ul>
+                <li><a href="/">home</a></li>
+                <li><a href="/projects" class="active">projects</a></li>
+                <li><a href="/blog">blog</a></li>
+                <li class="right"><a href="/contact">contact</a></li>
+            </ul>
+        </div>
+
+        <h1 class="title">&gt; projects</h1>
+
+        <p class="content">
+            <span class="highlight">Cybersecurity projects</span> built with a hands-on approach.
+            <br><br>
+
+            I build and experiment with security tools that operate at the
+            system and network level — designed to simulate, analyze,
+            and understand real-world behavior.
+            <br><br>
+
+            These projects reflect my learning, experimentation,
+            and practical implementation.
+            <br><br>
+
+            You can explore more of my work on
+            <a href="https://github.com/ShivkumarChougala" target="_blank" rel="noopener noreferrer">GitHub</a>.
+            <br><br>
+
+            <span class="highlight">$ ls</span> /projects
+        </p>
+
+        <br>
+
+        <table id="projects-table" class="shadow">
+            <thead>
+                <tr>
+                    <th>TITLE</th>
+                    <th>DESCRIPTION</th>
+                    <th>LINK</th>
+                </tr>
+            </thead>
+            <tbody id="projects-tbody"></tbody>
+        </table>
+
+        <pre class="footer"><code>
+source: <a class="alt" href="https://github.com/ShivkumarChougala" target="_blank" rel="noopener noreferrer">github.com/ShivkumarChougala</a>
+&copy; Shivkumar Chougala <script>document.write(new Date().getFullYear())</script>
+        </code></pre>
+    </div>
+
+    <script src="/static/projects.js"></script>
+    <script>
+        const tbody = document.getElementById("projects-tbody");
+
+        PROJECTS.forEach((project, index) => {
+            const tr = document.createElement("tr");
+
+            const titleTd = document.createElement("td");
+            titleTd.classList.add("title");
+            titleTd.textContent = `${String(index + 1).padStart(2, "0")}. ${project.title}`;
+
+            const descTd = document.createElement("td");
+            descTd.classList.add("description");
+            descTd.textContent = project.desc;
+
+            const linkTd = document.createElement("td");
+            linkTd.classList.add("link");
+
+            const link = document.createElement("a");
+            link.href = project.link;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.title = `Open ${project.title} on GitHub`;
+            link.textContent = "github →";
+
+            linkTd.appendChild(link);
+
+            tr.appendChild(titleTd);
+            tr.appendChild(descTd);
+            tr.appendChild(linkTd);
+
+            tbody.appendChild(tr);
+        });
+    </script>
+</body>
+</html>
