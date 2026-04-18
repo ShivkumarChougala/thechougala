@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>blog | thechougala</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="/static/favicon.jpg">
+
+    <link rel="stylesheet" href="/static/style.css?v=3">
+    <link rel="stylesheet" href="/static/ansi.css?v=2">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <!-- NAV -->
+        <div id="top-nav">
+            <ul>
+                <li><a href="/">home</a></li>
+                <li><a href="/projects">projects</a></li>
+                <li><a href="/blog" class="active">blog</a></li>
+                <li class="right"><a href="/contact">contact</a></li>
+            </ul>
+        </div>
+
+        <!-- TITLE -->
+        <h1 class="title">&gt; blog</h1>
+
+        <!-- INTRO -->
+        <p class="content">
+            <span class="highlight">Writeups & notes</span> from my learning and experiments.
+            <br><br>
+
+            I document technical insights, experiments, and observations
+            in cybersecurity and system-level analysis.
+            <br><br>
+
+            <span class="highlight">$ ls</span> /blog
+        </p>
+
+        <br>
+
+        <!-- TABLE -->
+        <table id="blog-table" class="shadow">
+            <thead>
+                <tr>
+                    <th>TITLE</th>
+                    <th>DESCRIPTION</th>
+                    <th>LINK</th>
+                </tr>
+            </thead>
+            <tbody id="blog-tbody"></tbody>
+        </table>
+
+        <!-- FOOTER -->
+        <pre class="footer"><code>
+source: <a class="alt" href="https://github.com/ShivkumarChougala" target="_blank" rel="noopener noreferrer">github.com/ShivkumarChougala</a>
+&copy; Shivkumar Chougala <script>document.write(new Date().getFullYear())</script>
+        </code></pre>
+    </div>
+
+    <!-- BLOG DATA -->
+    <script src="/static/blog.js"></script>
+
+    <!-- RENDER SCRIPT -->
+    <script>
+        const tbody = document.getElementById("blog-tbody");
+
+        BLOGS.forEach((post, index) => {
+            const tr = document.createElement("tr");
+
+            // TITLE
+            const titleTd = document.createElement("td");
+            titleTd.classList.add("title");
+            titleTd.textContent = `${String(index + 1).padStart(2, "0")}. ${post.title}`;
+
+            // DESCRIPTION
+            const descTd = document.createElement("td");
+            descTd.classList.add("description");
+            descTd.textContent = post.desc;
+
+            // LINK
+            const linkTd = document.createElement("td");
+            linkTd.classList.add("link");
+
+            const link = document.createElement("a");
+            link.href = post.link;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.title = "Read full article";
+            link.textContent = "read →";
+
+            linkTd.appendChild(link);
+
+            tr.appendChild(titleTd);
+            tr.appendChild(descTd);
+            tr.appendChild(linkTd);
+
+            tbody.appendChild(tr);
+        });
+    </script>
+</body>
+</html>
