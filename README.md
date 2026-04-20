@@ -1,5 +1,7 @@
 # thechougala
 
-This is my personal website where I share my projects, cybersecurity work, blogs, and experiments I’ve been building along the way. It’s a place where I document what I learn, what I break, and what I build. Nothing too fancy — just real work and real progress. If that sounds interesting, feel free to check it out.
+This is my personal space on the internet where I share my projects, cybersecurity work, blogs, and random experiments I’ve been building (and sometimes breaking). It’s basically a log of what I learn, test, and explore — no fluff, just real work.
+
+If you’re into that kind of stuff, you know what to do 👇
 
 🌐 https://thechougala.in
