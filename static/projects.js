@@ -1,7 +1,7 @@
 const PROJECTS = [
   {
     title: "DrishtiMesh",
-    desc: "One-click honeypot deployment with community threat sharing",
+    desc: "Distributed honeypot mesh for one-click threat collection and real-time IP reputation intelligence.",
     link: "https://github.com/ShivkumarChougala/drishtimesh"
   },
 
