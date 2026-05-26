@@ -1,18 +1,19 @@
 const PROJECTS = [
   {
-    title: "GhostTrap",
-    desc: "AI-powered SSH honeypot for analyzing attacker behavior",
-    link: "https://github.com/ShivkumarChougala/ghosttrap"
-  },
-{
-    title: "ai-security-platform",
-    desc: "A playground where you attack real vulnerabilities and see exactly what happens inside the system. ",
-    link: "https://github.com/ShivkumarChougala/ai-security-platform"
+    title: "DrishtiMesh",
+    desc: "One-click honeypot deployment with community threat sharing",
+    link: "https://github.com/ShivkumarChougala/drishtimesh"
   },
 
   {
-    title: "SurfaceWatch",
-    desc: "System exposure and attack surface analysis tool",
-    link: "https://github.com/ShivkumarChougala/SurfaceWatch"
+    title: "GhostTrap",
+    desc: "AI-powered SSH honeypot designed to capture and analyze real attacker behavior and commands",
+    link: "https://github.com/ShivkumarChougala/ghosttrap"
+  },
+
+  {
+    title: "ReputationWatch",
+    desc: "Explainable IP reputation intelligence powered by real attacker telemetry and community threat signals",
+    link: "https://github.com/ShivkumarChougala/reputationwatch"
   }
 ];
