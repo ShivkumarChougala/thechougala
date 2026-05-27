@@ -13,7 +13,7 @@ const PROJECTS = [
 
   {
     title: "ReputationWatch",
-    desc: "Explainable IP reputation intelligence powered by real attacker telemetry and community threat signals",
+    desc: "Explainable IP reputation intelligence powered by real attacker and community signals",
     link: "https://github.com/ShivkumarChougala/reputationwatch"
   }
 ];
