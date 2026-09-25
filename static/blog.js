@@ -1,4 +1,10 @@
 const BLOGS = [
+  {
+    title: "SOC Home Lab ",
+    desc: "Building a SOC Home Lab with Proxmox and Wazuh",
+    link: "https://medium.com/@thechougala/building-a-soc-home-lab-with-proxmox-and-wazuh-part-1-498974111d05"
+  },
+
 
   {
     title: "GhostTrap: AI-Powered SSH Honeypot",
